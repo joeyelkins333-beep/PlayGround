@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#1a2b1a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+<title>Vale of Oaths — Fable × Harvest Tale</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="960" height="640"></canvas>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div id="stats">
+      <div class="stat" id="hud-day">☀️ Day 1 <span id="hud-time">08:00</span></div>
+      <div class="stat">⚡ <span id="hud-energy">100</span> ❤️ <span id="hud-hp">100</span> 🪙 <span id="hud-gold">50</span></div>
+      <div class="stat" id="hud-align">⚖️ Neutral &nbsp; ★ <span id="hud-renown">0</span></div>
+    </div>
+    <div id="hotbar"></div>
+    <div id="toast"></div>
+  </div>
+
+  <!-- Touch controls -->
+  <div id="touch">
+    <div id="joy"><div id="stick"></div></div>
+    <div id="btns">
+      <button id="btn-tool" class="tbtn">🔄<small>tool</small></button>
+      <button id="btn-act" class="tbtn big">✋<small>act</small></button>
+      <button id="btn-sleep" class="tbtn">😴<small>sleep</small></button>
+    </div>
+  </div>
+
+  <!-- Panels -->
+  <div id="panel" class="hidden">
+    <div id="panel-card">
+      <h2 id="panel-title"></h2>
+      <div id="panel-body"></div>
+      <div id="panel-choices"></div>
+      <button id="panel-close">Close ✕</button>
+    </div>
+  </div>
+
+  <div id="title-screen">
+    <div class="title-card">
+      <div class="pixel-logo">🌾⚔️🌾</div>
+      <h1>VALE OF OATHS</h1>
+      <p class="sub">A <b>Fable-like</b> moral tale with <b>harvest-sim</b> farming.<br>Fresh 16×16 Stardew-<i>style</i> sprite art — 100% original, no Stardew assets.</p>
+      <ul class="how">
+        <li>🌱 Till → Plant → Water → Harvest → Sell</li>
+        <li>⚖️ Every quest has a <span class="good">Good</span> or <span class="evil">Evil</span> choice. Villagers remember.</li>
+        <li>👼😈 Enough good/evil changes your look, prices &amp; ending.</li>
+        <li>📱 Phone/tablet: left stick to walk, big button to act.</li>
+      </ul>
+      <button id="btn-start">▶ Start New Life</button>
+      <button id="btn-continue" class="hidden">↻ Continue (Day <span id="save-day"></span>)</button>
+      <p class="fine">WASD / arrows + E on desktop. Tap tiles to inspect.</p>
+    </div>
+  </div>
+
+  <div id="ending" class="hidden">
+    <div class="title-card">
+      <h1 id="end-title"></h1>
+      <p id="end-text"></p>
+      <button id="btn-again">↻ New Life</button>
+    </div>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
